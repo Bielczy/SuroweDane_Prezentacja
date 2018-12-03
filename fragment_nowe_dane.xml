@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NoweDaneFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <EditText
+            android:id="@+id/dodajDate"
+            android:layout_width="0dp"
+            android:layout_height="@android:dimen/app_icon_size"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="16dp"
+            android:text="@string/dodajDate"
+            app:layout_constraintBottom_toTopOf="@+id/osoba"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/osoba"
+            android:layout_width="match_parent"
+            android:layout_height="@android:dimen/app_icon_size"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="16dp"
+            android:text="@string/osoba"
+            app:layout_constraintBottom_toTopOf="@+id/wartosc"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dodajDate" />
+
+        <EditText
+            android:id="@+id/wartosc"
+            android:layout_width="0dp"
+            android:layout_height="@android:dimen/app_icon_size"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="73dp"
+            android:text="@string/wartosc"
+            app:layout_constraintBottom_toTopOf="@+id/dodajDoBazy"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/osoba" />
+
+        <Button
+            android:id="@+id/dodajDoBazy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="73dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="258dp"
+            android:text="@string/dodajDoBazy"
+            android:onClick="onDodajClick"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/wartosc" />
+    </android.support.constraint.ConstraintLayout>
+</FrameLayout>

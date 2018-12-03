@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">SuroweDane_Prezentacja</string>
+    <string name="dateBegin">data początkowa</string>
+    <string name="dateEnd">data końcowa</string>
+    <string name="Przelacz">Przełącz</string>
+    <string name="dodajDate">data zdarzenia</string>
+    <string name="osoba">kogo dotyczy</string>
+    <string name="wartosc">ile</string>
+    <string name="dodajDoBazy">DODAJ</string>
+    <string name="pokazWszystkie">CAŁOŚĆ</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+</resources>
