@@ -12,7 +12,7 @@ import android.support.annotation.NonNull;
 
 @Database(entities =
         {SuroweDane.class},
-        version = 5,
+        version = 9,
         exportSchema = false)
 public abstract class BazaDanych extends RoomDatabase {
 
@@ -26,7 +26,7 @@ public abstract class BazaDanych extends RoomDatabase {
                 if (INSTANCE == null) {
                     INSTANCE = Room.databaseBuilder(context.getApplicationContext(),
                             BazaDanych.class,
-                            "tabela_SuroweDane5")
+                            "tabela_SuroweDane9")
                             .fallbackToDestructiveMigration()
                             .addCallback(bazaDanychCallback)
                             .allowMainThreadQueries()

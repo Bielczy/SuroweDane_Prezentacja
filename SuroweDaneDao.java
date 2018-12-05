@@ -25,6 +25,9 @@ public interface SuroweDaneDao {
     @Query("SELECT * FROM tabela_SuroweDane")
     List<SuroweDane> getAll2();
 
+  /*  @Query("SELECT osoba FROM tabela_SuroweDane")
+    List<SuroweDane> getAll3();*/
+
     @Query("SELECT * FROM tabela_SuroweDane WHERE date BETWEEN :begin AND :end")
     LiveData<List<SuroweDane>>getAllByDate(String begin, String end);
 

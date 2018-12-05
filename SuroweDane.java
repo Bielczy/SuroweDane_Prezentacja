@@ -33,6 +33,7 @@ public class SuroweDane {
         this.date = date;
     }
 
+
     public int getId() {
         return id;
     }
