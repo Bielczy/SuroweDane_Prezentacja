@@ -8,9 +8,8 @@
     <string name="wartosc">ile</string>
     <string name="dodajDoBazy">DODAJ</string>
     <string name="pokazWszystkie">CAŁOŚĆ</string>
-
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-
+    <string name="imageStart">To jest ekran powitalny..</string>
+    <string name="tvPowitanie">To jest ekran powitalny z tymczasową zawartością, która może zostać nadpisana.</string>
+    <string name="btnNoweDane">Dodaj Rekord</string>
 
 </resources>

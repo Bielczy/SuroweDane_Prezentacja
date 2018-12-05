@@ -17,13 +17,18 @@ public class SuroweDane {
     private int wartosc = 0;
 
     @ColumnInfo(name = "date")
-    protected String date;
+    protected String date = "";
+    //private float valueX;
 
 
-    private String mSuroweDane;
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    //private String mSuroweDane;
 
     public SuroweDane(String imie, int wartosc, String date) {
-        this.mSuroweDane = imie;
+        this.imie = imie;
         this.wartosc = wartosc;
         this.date = date;
     }
@@ -32,10 +37,9 @@ public class SuroweDane {
         return id;
     }
 
-    public String getmSuroweDane() {
-        return mSuroweDane;
-    }
-
+    //public String getmSuroweDane() {
+       // return mSuroweDane;
+//
     public int getWartosc() {
         return wartosc;
     }
@@ -60,9 +64,11 @@ public class SuroweDane {
         this.date = date;
     }
 
-    public void setmSuroweDane(String mSuroweDane) {
-        this.mSuroweDane = mSuroweDane;
-    }
+
+
+// public void setmSuroweDane(String mSuroweDane) {
+      //  this.mSuroweDane = mSuroweDane;
+  //  }
 
 
 

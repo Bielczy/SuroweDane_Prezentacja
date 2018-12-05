@@ -8,17 +8,18 @@ import java.util.List;
 
 public class Repozytorium {
 
-    private SuroweDaneDao mSuroweDaneDao;
-    private LiveData<List<SuroweDane>> mAllSuroweDane;
+    public SuroweDaneDao mSuroweDaneDao;
+    //private LiveData<List<SuroweDane>> mAllSuroweDane;
+    public BazaDanych db;
 
     Repozytorium (Application application){
-        BazaDanych db = BazaDanych.getDatabase(application);
+        db = BazaDanych.getDatabase(application);
         mSuroweDaneDao = db.suroweDaneDao();
-        mAllSuroweDane = mSuroweDaneDao.getAllBySuroweDane();
+        //mAllSuroweDane = mSuroweDaneDao.getAllBySuroweDane();
     }
-    LiveData<List<SuroweDane>> getAllBySuroweDane(){
-        return mAllSuroweDane;
-    }
+    //LiveData<List<SuroweDane>> getAllBySuroweDane(){
+    //    return mAllSuroweDane;
+   // }
 
     public void insert (SuroweDane suroweDane){
         new insertAsyncTask(mSuroweDaneDao).execute(suroweDane);

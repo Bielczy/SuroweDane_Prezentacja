@@ -12,7 +12,7 @@ import android.support.annotation.NonNull;
 
 @Database(entities =
         {SuroweDane.class},
-        version = 1,
+        version = 5,
         exportSchema = false)
 public abstract class BazaDanych extends RoomDatabase {
 
@@ -26,8 +26,10 @@ public abstract class BazaDanych extends RoomDatabase {
                 if (INSTANCE == null) {
                     INSTANCE = Room.databaseBuilder(context.getApplicationContext(),
                             BazaDanych.class,
-                            "tabela_SuroweDane")
+                            "tabela_SuroweDane5")
+                            .fallbackToDestructiveMigration()
                             .addCallback(bazaDanychCallback)
+                            .allowMainThreadQueries()
                             .build();
                 }
             }
@@ -42,6 +44,7 @@ public abstract class BazaDanych extends RoomDatabase {
             super.onCreate(db);
             new PublikacjaDbAsync(INSTANCE).execute();
         }
+
     };
 
     private static class PublikacjaDbAsync extends AsyncTask<Void, Void, Void> {
@@ -59,25 +62,27 @@ public abstract class BazaDanych extends RoomDatabase {
             suroweDao.insert(suroweDane);
 
             suroweDane = new SuroweDane("Tomasz", 8, "date");
-            suroweDao.insert(suroweDane);
+            long id1 = suroweDao.insert(suroweDane);
             suroweDane = new SuroweDane("Sabina", 32, "date");
-            suroweDao.insert(suroweDane);
+            long id2 = suroweDao.insert(suroweDane);
             suroweDane = new SuroweDane("Pankracy", 61, "date");
-            suroweDao.insert(suroweDane);
+            long id3 = suroweDao.insert(suroweDane);
             suroweDane = new SuroweDane("Marzena", 37, "date");
-            suroweDao.insert(suroweDane);
+            long id4 = suroweDao.insert(suroweDane);
             suroweDane = new SuroweDane("Rafał", 46, "date");
-            suroweDao.insert(suroweDane);
+            long id5 =  suroweDao.insert(suroweDane);
             suroweDane = new SuroweDane("Jadwinia", 23, "date");
-            suroweDao.insert(suroweDane);
+            long id6 = suroweDao.insert(suroweDane);
             suroweDane = new SuroweDane("Wacław", 1, "date");
-            suroweDao.insert(suroweDane);
+            long id7 = suroweDao.insert(suroweDane);
             suroweDane = new SuroweDane("Karolina", 19, "date");
-            suroweDao.insert(suroweDane);
+            long id8 = suroweDao.insert(suroweDane);
             suroweDane = new SuroweDane("Szczepan", 40, "date");
-            suroweDao.insert(suroweDane);
+            long id9 = suroweDao.insert(suroweDane);
             suroweDane = new SuroweDane("Anita", 54, "date");
-            suroweDao.insert(suroweDane);
+            long id10 = suroweDao.insert(suroweDane);
+
+
             return null;
         }
     }

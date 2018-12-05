@@ -10,7 +10,7 @@
         android:id="@+id/dateBegin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="24dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
@@ -19,20 +19,19 @@
         app:layout_constraintEnd_toStartOf="@+id/dateEnd"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.506"
         tools:text="@tools:sample/date/ddmmyy" />
 
     <TextView
         android:id="@+id/dateEnd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="21dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:text="@string/dateEnd"
         app:layout_constraintBottom_toTopOf="@+id/guideline"
         app:layout_constraintEnd_toStartOf="@+id/Przelacz"
-        app:layout_constraintStart_toEndOf="@+id/dateBegin"
         app:layout_constraintTop_toTopOf="parent"
         tools:text="@tools:sample/date/ddmmyy" />
 
@@ -40,30 +39,26 @@
         android:id="@+id/Przelacz"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        android:text="@string/Przelacz"
         android:onClick="onPrzelaczClick"
+        android:text="@string/Przelacz"
         app:layout_constraintBottom_toTopOf="@+id/guideline"
         app:layout_constraintEnd_toStartOf="@+id/pokazWszystkie"
-        app:layout_constraintStart_toEndOf="@+id/dateEnd"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/pokazWszystkie"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="17dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginEnd="24dp"
         android:layout_marginBottom="8dp"
-        android:text="@string/pokazWszystkie"
         android:onClick="onCaloscClick"
+        android:text="@string/pokazWszystkie"
         app:layout_constraintBottom_toTopOf="@+id/guideline"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/Przelacz"
         app:layout_constraintTop_toTopOf="parent" />
 
     <android.support.constraint.Guideline
@@ -71,21 +66,38 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="87dp" />
+        app:layout_constraintGuide_begin="108dp" />
 
     <FrameLayout
         android:id="@+id/action_container"
-        android:layout_width="395dp"
-        android:layout_height="473dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="73dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnNoweDane"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.482"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline">
 
     </FrameLayout>
+
+    <Button
+        android:id="@+id/btnNoweDane"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:onClick="onDodajRekord"
+        android:text="@string/btnNoweDane"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/action_container"
+        app:layout_constraintVertical_bias="0.195" />
 
 </android.support.constraint.ConstraintLayout>
